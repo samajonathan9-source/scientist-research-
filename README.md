@@ -1,4 +1,15 @@
-# scientist-research — Trous noirs, Alcubierre & la Loi de Cohérence Topologique
+<p align="center">
+  <img src="docs/brand/sciresearch-logo.png" alt="Bulle de warp d'Alcubierre — intérieur plat, mur déformé, noyau topologique" width="220"/>
+</p>
+
+<h1 align="center">scientist-research — Trous noirs, Alcubierre &amp; la Loi de Cohérence Topologique</h1>
+
+<p align="center">
+  <a href="LICENSE"><img alt="Licence MIT" src="https://img.shields.io/badge/Licence-MIT-42d6ad?style=for-the-badge"></a>
+  <img alt="Python" src="https://img.shields.io/badge/Python-Figures-79b8ff?style=for-the-badge&logo=python&logoColor=white">
+  <img alt="Site statique" src="https://img.shields.io/badge/Site-statique%20GitHub%20Pages-6929c4?style=for-the-badge">
+  <img alt="DOI" src="https://img.shields.io/badge/DOI-10.17605%2FOSF.IO%2F6JZMB-ff927d?style=for-the-badge">
+</p>
 
 > **Auteur** : Jonathan Evina · ORCID 0009-0000-4092-5313 · DOI 10.17605/OSF.IO/6JZMB
 > **Propriété intellectuelle** : JOHNKING0 & Jonathan Evina
