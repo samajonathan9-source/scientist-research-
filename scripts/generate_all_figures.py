@@ -40,7 +40,7 @@ C_GREEN = "#22c55e"
 C_VIOLET = "#8b5cf6"
 
 try:
-    from warp.metric.alcubierre import profile_tanh, exotic_matter_baseline
+    from warp.metric.alcubierre import exotic_matter_baseline
     from warp.metric.lambda_lct import reduce_exotic_matter, LCTAnsatz
     from warp.topology.universal_kernel import (
         UNIVERSAL_KERNEL_P_SIG, warp_shell_coords, psig_profile_universal,
@@ -52,6 +52,19 @@ try:
     HAVE_WARP = True
 except Exception:
     HAVE_WARP = False
+
+
+def profile_tanh(r, R=1.0, eps=0.2):
+    """Forme canonique du mur d'Alcubierre (1 à l'intérieur, 0 à l'extérieur).
+
+    Rendue autonome : le script en a besoin même lorsque le module optionnel
+    `warp` n'est pas installé (ex. environnement CI). f(0) ~= 1, f(R) = 0.5,
+    f -> 0 en dehors du mur ; eps contrôle la raideur de la paroi.
+    """
+    r = np.asarray(r, dtype=float)
+    denominator = 2.0 * np.tanh(R / eps)
+    numerator = np.tanh((r + R) / eps) - np.tanh((r - R) / eps)
+    return numerator / denominator
 
 
 def save(fig, name):
